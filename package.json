@@ -1,5 +1,5 @@
 {
-  "name": "animais-fantasticos",
+  "name": "borges-software",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
@@ -13,8 +13,8 @@
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
