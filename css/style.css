@@ -727,3 +727,26 @@ img {
 [data-semana].aberto::after {
   background: #3f4;
 }
+.title-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background: black;
+}
+.neon {
+  text-align: center;
+  margin-top: 20px;
+  height: 80px;
+  font-size: 1.8rem;
+  color: #3f4;
+  border: 3px solid #3f4;
+  border-radius: 60px;
+  box-shadow: 2px 2px 28px #3f4;
+}
+.neon h1 {
+  padding-right: 20px;
+  padding-left: 20px;
+  text-shadow: 0 0 20px #3f4;
+  letter-spacing: 10px;
+}
