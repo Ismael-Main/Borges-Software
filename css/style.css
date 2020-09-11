@@ -716,16 +716,31 @@ img {
 /*horario aberto*/
 [data-semana]::after {
   display: inline-block;
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: red;
-  border-radius: 50%;
-  margin-left: 4px;
-  border: 1px solid #222;
+  content: 'FECHADO';
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  background: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 7px;
+  color: red;
+  border: 1px solid red;
+  border-radius: 60px;
+  box-shadow: 2px 2px 15px red;
 }
 [data-semana].aberto::after {
-  background: #3f4;
+  display: inline-block;
+  content: 'ABERTO';
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  background: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 7px;
+  color: #3f4;
+  border: 1px solid #3f4;
+  border-radius: 60px;
+  box-shadow: 2px 2px 15px #3f4;
 }
 .title-container {
   display: flex;
@@ -737,7 +752,7 @@ img {
 .neon {
   text-align: center;
   margin-top: 20px;
-  height: 75px;
+  height: 70px;
   font-size: 1.6rem;
   color: #3f4;
   border: 3px solid #3f4;
