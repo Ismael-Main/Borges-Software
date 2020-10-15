@@ -15,7 +15,6 @@ h1 {
 body {
   font-family: 'Nunito', Helvetica, Arial, sans-serif;
   color: #000000;
-  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -39,7 +38,7 @@ img {
 /*Superinfo*/
 
 .superinfo-bg {
-  background: black;
+  background: #1f1f1f;
   color: white;
 }
 
@@ -83,7 +82,7 @@ img {
 }
 
 .menu-logo img {
-  width: 160px;
+  width: 180px;
 }
 
 .menu-nav ul {
@@ -167,11 +166,8 @@ img {
 
 .intro-img {
   flex: 1 260px;
-  padding-top: 38px;
 }
-.intro-img img {
-  align-self: baseline;
-}
+
 /*Diferenciais*/
 
 .diferenciais {
@@ -344,31 +340,35 @@ img {
 
 /*Sobre*/
 
-.sobre-container {
-  display: flex;
-  justify-content: space-around;
+.sobre {
+  border-bottom: 3px solid #0041a4;
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 40px;
-  border-bottom: #0041a4 3px solid;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
 }
-.sobre {
-  padding: 10px;
-  width: 800px;
+
+.sobre-info {
+  flex: 1 1 400px;
 }
-.sobre h1 {
+
+.sobre-info h1 {
   font-size: 2em;
-  font-weight: 500;
+  margin-bottom: 0.5em;
 }
-.sobre p {
-  padding-top: 30px;
-  font-size: 1.1em;
+
+.sobre-info p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  color: #7c7c7c;
 }
+
 .sobre-img {
-  padding-bottom: 20px;
-  padding-top: 50px;
-  max-width: 500px;
-  margin: 0 10px;
+  flex: 1 260px;
+  padding-top: 70px;
 }
 
 /*qualidades*/
@@ -377,6 +377,7 @@ img {
   border-bottom: 3px solid #0041a4;
   max-width: 960px;
   margin: 0 auto;
+  padding: 20px;
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
@@ -745,4 +746,158 @@ img {
   text-shadow: 0 0 20px #3f4;
   letter-spacing: 8px;
   font-size: 1.8em;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1109px) {
+  .menu-logo img {
+    padding-left: 10px;
+  }
+
+  /*intro*/
+  .intro-img {
+    max-width: 290px;
+    margin: 0 auto;
+    padding-top: 0px;
+    padding-left: 10px;
+  }
+
+  .intro-info p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+  }
+
+  /*sobre*/
+
+  .sobre-img {
+    max-width: 290px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 10px;
+  }
+
+  .sobre-info p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+  }
+}
+@media (max-width: 966px) {
+  /*intro*/
+  .intro {
+    display: block;
+  }
+
+  .intro-img {
+    max-width: 350px;
+    margin: 0 auto;
+    padding-top: 0px;
+  }
+  /*Diferenciais*/
+  .diferenciais-item {
+    flex: 1;
+  }
+  .diferenciais img {
+    width: 120px;
+  }
+
+  /*sobre*/
+  .sobre {
+    display: block;
+  }
+
+  .sobre-img {
+    max-width: 350px;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  /*neon*/
+  .neon {
+    height: 60px;
+  }
+  .neon h1 {
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 6px;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 650px) {
+  /*superinfo*/
+  .superinfo p,
+  .superinfo a {
+    margin: 0 10px 10px 10px;
+    font-size: 0.8em;
+  }
+  /*menu logo*/
+  .menu-logo img {
+    width: 160px;
+  }
+
+  /*intro*/
+  .introducao {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+  .intro-info h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  /*Difenciais*/
+
+  .diferenciais-container {
+    display: block;
+    align-items: flex-end;
+  }
+  .diferenciais-item {
+    margin: 0 auto;
+    max-width: 200px;
+    margin-top: 10px;
+  }
+
+  /*neon*/
+  .neon {
+    height: 50px;
+  }
+  .neon h1 {
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 6px;
+    font-size: 1.2em;
+  }
+
+  /*Sobre*/
+  .sobre-info h1 {
+    font-size: 1.5em;
+  }
+
+  /*qualidades*/
+  .qualidades-info h1 {
+    font-size: 1.5em;
+  }
+  .qualidades-info ul {
+    font-size: 1.2em;
+  }
+
+  /*titulo*/
+  .titulo {
+    font-size: 1.5em;
+    padding: 20px;
+    font-weight: 400;
+  }
+
+  /*projetos*/
+  .box h1 {
+    font-size: 1.2em;
+  }
+
+  .footer p {
+    font-size: 1em;
+  }
 }
