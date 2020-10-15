@@ -13,3 +13,4 @@ initModal();
 initDropDownMenu();
 initMenuMobile();
 initFuncionamento();
+console.log('Palmeiras não tem mundial');

@@ -1,1 +1,197 @@
-!function(t){var e={};function n(o){if(e[o])return e[o].exports;var c=e[o]={i:o,l:!1,exports:{}};return t[o].call(c.exports,c,c.exports,n),c.l=!0,c.exports}n.m=t,n.c=e,n.d=function(t,e,o){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var c in t)n.d(o,c,function(e){return t[e]}.bind(null,c));return o},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=0)}([function(t,e,n){"use strict";function o(t,e,n){const o=document.documentElement;function c(r){t.contains(r.target)||(t.removeAttribute("data-outside"),e.forEach(t=>{o.removeEventListener(t,c)}),n())}t.hasAttribute("data-outside")||(e.forEach(t=>{setTimeout(()=>{o.addEventListener(t,c)})}),t.setAttribute("data-outside",""))}n.r(e);const c=document.querySelector('[data-menu="button"]'),r=document.querySelector('[data-menu="list"]'),a=["click","touchstart"];if(c){function i(t){r.classList.add("active"),c.classList.add("active"),o(r,a,()=>{r.classList.remove("active"),c.classList.remove("active")})}a.forEach(t=>c.addEventListener(t,i))}!function(t){const e=t.innerHTML.split("");t.innerHTML="",e.forEach((e,n)=>{setTimeout(()=>{t.innerHTML+=e},80*n)})}(document.querySelector("h1")),function(){const t=document.querySelectorAll("[data-anime]");function e(){const e=window.pageYOffset+2*window.innerHeight/3;t.forEach((function(t){e>t.offsetTop?t.classList.add("animated"):t.classList.remove("animated")}))}e(),window.addEventListener("scroll",(function(){e()}))}(),function(){function t(t){t.preventDefault();!function(t){!function(t,e,n){const o=window.scrollX||window.pageXOffset,c=window.scrollY||window.pageYOffset,r=t-o,a=e-c,i=(new Date).getTime();n=void 0!==n?n:1200;const s=(t,e,n,o)=>(t/=o/2)<1?n/2*t*t*t*t+e:-n/2*((t-=2)*t*t*t-2)+e,u=setInterval(()=>{const t=(new Date).getTime()-i,e=s(t,o,r,n),d=s(t,c,a,n);t>=n&&clearInterval(u),window.scroll(e,d)},1e3/60)}(0,t)}(function(t){const e=t.getAttribute("href");return document.querySelector(e).offsetTop}(t.target)-80)}document.querySelectorAll('.menu a[href^="#"]').forEach(e=>{e.addEventListener("click",t)})}(),function(){const t=document.querySelector('[data-modal="abrir"]'),e=document.querySelector('[data-modal="fechar"]'),n=document.querySelector('[data-modal="container"]');if(t&&e&&n){function o(t){t.preventDefault(),n.classList.toggle("ativo")}t.addEventListener("click",o),e.addEventListener("click",o),n.addEventListener("click",(function(t){t.target===this&&o(t)}))}}(),function(){function t(t){t.preventDefault(),this.classList.add("active"),o(this,["touchstart","click"],()=>{this.classList.remove("active")})}document.querySelectorAll("[data-dropdown]").forEach(e=>{["touchstart","click"].forEach(n=>{e.addEventListener(n,t)})})}(),function(){const t=document.querySelector('[data-menu="button"]'),e=document.querySelector('[data-menu="list"]'),n=["click","touchstart"];function c(c){e.classList.add("active"),t.classList.add("active"),o(e,n,()=>{e.classList.remove("active"),t.classList.remove("active")})}n.forEach(e=>{t.addEventListener("click",c)})}(),function(){const t=document.querySelector("[data-semana]"),e=t.dataset.semana.split(",").map(Number),n=t.dataset.horario.split(",").map(Number),o=new Date,c=o.getDay(),r=o.getHours(),a=-1!==e.indexOf(c),i=r>=n[0]&&r<n[1];a&&i&&t.classList.add("aberto")}()}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/script.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./js/modulos/animacao-maquina-escrever.js":
+/*!*************************************************!*\
+  !*** ./js/modulos/animacao-maquina-escrever.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initAnimeMaquinaEscrever; });\n// animaçao maquina de escrever\nfunction initAnimeMaquinaEscrever() {\n  function typeWriter(elemento) {\n    const textoArray = elemento.innerHTML.split('');\n    elemento.innerHTML = '';\n    textoArray.forEach((letra, i) => {\n      setTimeout(() => {\n        elemento.innerHTML += letra;\n      }, 80 * i);\n    });\n  }\n  const titulo = document.querySelector('h1');\n  typeWriter(titulo);\n}\n\n\n//# sourceURL=webpack:///./js/modulos/animacao-maquina-escrever.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/animacao-scroll-suave.js":
+/*!*********************************************!*\
+  !*** ./js/modulos/animacao-scroll-suave.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initScrollSuave; });\n/*Scroll suave */\r\nfunction initScrollSuave() {\r\n  const menuItems = document.querySelectorAll('.menu a[href^=\"#\"]');\r\n\r\n  menuItems.forEach((item) => {\r\n    item.addEventListener('click', scrollToIdOnClick);\r\n  });\r\n\r\n  function getScrollTopByHref(element) {\r\n    const id = element.getAttribute('href');\r\n    return document.querySelector(id).offsetTop;\r\n  }\r\n\r\n  function scrollToIdOnClick(event) {\r\n    event.preventDefault();\r\n    const to = getScrollTopByHref(event.target) - 80;\r\n    scrollToPosition(to);\r\n  }\r\n\r\n  function scrollToPosition(to) {\r\n    // window.scroll({\r\n    //   top: to,\r\n    //   behavior: \"smooth\",\r\n    // });\r\n    smoothScrollTo(0, to);\r\n  }\r\n\r\n  /**\r\n   * Smooth scroll animation\r\n   * @param {int} endX: destination x coordinate\r\n   * @param {int} endY: destination y coordinate\r\n   * @param {int} duration: animation duration in ms\r\n   */\r\n  function smoothScrollTo(endX, endY, duration) {\r\n    const startX = window.scrollX || window.pageXOffset;\r\n    const startY = window.scrollY || window.pageYOffset;\r\n    const distanceX = endX - startX;\r\n    const distanceY = endY - startY;\r\n    const startTime = new Date().getTime();\r\n\r\n    duration = typeof duration !== 'undefined' ? duration : 1200;\r\n\r\n    // Easing function\r\n    const easeInOutQuart = (time, from, distance, duration) => {\r\n      if ((time /= duration / 2) < 1)\r\n        return (distance / 2) * time * time * time * time + from;\r\n      return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;\r\n    };\r\n\r\n    const timer = setInterval(() => {\r\n      const time = new Date().getTime() - startTime;\r\n      const newX = easeInOutQuart(time, startX, distanceX, duration);\r\n      const newY = easeInOutQuart(time, startY, distanceY, duration);\r\n      if (time >= duration) {\r\n        clearInterval(timer);\r\n      }\r\n      window.scroll(newX, newY);\r\n    }, 1000 / 60); // 60 fps\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./js/modulos/animacao-scroll-suave.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/animacao-scroll.js":
+/*!***************************************!*\
+  !*** ./js/modulos/animacao-scroll.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initScroll; });\nfunction initScroll() {\r\n  const alvo = document.querySelectorAll('[data-anime]');\r\n  const animacaoClass = 'animated';\r\n\r\n  function animeScroll() {\r\n    const windowTop = window.pageYOffset + (window.innerHeight * 2) / 3;\r\n    alvo.forEach(function (elemento) {\r\n      if (windowTop > elemento.offsetTop) {\r\n        elemento.classList.add(animacaoClass);\r\n      } else {\r\n        elemento.classList.remove(animacaoClass);\r\n      }\r\n    });\r\n  }\r\n  animeScroll();\r\n  window.addEventListener('scroll', function () {\r\n    animeScroll();\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack:///./js/modulos/animacao-scroll.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/dropdown-menu.js":
+/*!*************************************!*\
+  !*** ./js/modulos/dropdown-menu.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initDropdownMenu; });\n/* harmony import */ var _outsideClick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./outsideClick.js */ \"./js/modulos/outsideClick.js\");\n\n\nfunction initDropdownMenu() {\n  const dropdownMenus = document.querySelectorAll('[data-dropdown]');\n  dropdownMenus.forEach((menu) => {\n    ['touchstart', 'click'].forEach((userEvent) => {\n      menu.addEventListener(userEvent, handleClick);\n    });\n  });\n\n  function handleClick(event) {\n    event.preventDefault();\n    this.classList.add('active');\n    Object(_outsideClick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(this, ['touchstart', 'click'], () => {\n      this.classList.remove('active');\n    });\n  }\n}\n\n\n//# sourceURL=webpack:///./js/modulos/dropdown-menu.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/funcionamento.js":
+/*!*************************************!*\
+  !*** ./js/modulos/funcionamento.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initFuncionamento; });\nfunction initFuncionamento() {\r\n  const funcionamento = document.querySelector('[data-semana]');\r\n  const diasSemana = funcionamento.dataset.semana.split(',').map(Number);\r\n  const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);\r\n\r\n  const dataAgora = new Date();\r\n  const diaAgora = dataAgora.getDay();\r\n  const horarioAgora = dataAgora.getHours();\r\n  const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;\r\n\r\n  const horarioAberto =\r\n    horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1];\r\n\r\n  if (semanaAberto && horarioAberto) {\r\n    funcionamento.classList.add('aberto');\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./js/modulos/funcionamento.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/menu-mobile.js":
+/*!***********************************!*\
+  !*** ./js/modulos/menu-mobile.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initMenuMobile; });\n/* harmony import */ var _outsideClick_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./outsideClick.js */ \"./js/modulos/outsideClick.js\");\n\n\nfunction initMenuMobile() {\n  const menuButton = document.querySelector('[data-menu=\"button\"]');\n  const menuList = document.querySelector('[data-menu=\"list\"]');\n  const eventos = ['click', 'touchstart'];\n\n  function openMenu() {\n    menuList.classList.add('active');\n    menuButton.classList.add('active');\n    Object(_outsideClick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(menuList, eventos, () => {\n      menuList.classList.remove('active');\n      menuButton.classList.remove('active');\n    });\n  }\n  eventos.forEach(() => {\n    menuButton.addEventListener('click', openMenu);\n  });\n}\nconst menuButton = document.querySelector('[data-menu=\"button\"]');\nconst menuList = document.querySelector('[data-menu=\"list\"]');\nconst eventos = ['click', 'touchstart'];\n\nif (menuButton) {\n  function openMenu(event) {\n    menuList.classList.add('active');\n    menuButton.classList.add('active');\n    Object(_outsideClick_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(menuList, eventos, () => {\n      menuList.classList.remove('active');\n      menuButton.classList.remove('active');\n    });\n  }\n  eventos.forEach((evento) => menuButton.addEventListener(evento, openMenu));\n}\n\n\n//# sourceURL=webpack:///./js/modulos/menu-mobile.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/modal.js":
+/*!*****************************!*\
+  !*** ./js/modulos/modal.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initModal; });\nfunction initModal() {\r\n  const botaoAbrir = document.querySelector('[data-modal=\"abrir\"]');\r\n  const botaoFechar = document.querySelector('[data-modal=\"fechar\"]');\r\n  const containerModal = document.querySelector('[data-modal=\"container\"]');\r\n\r\n  if (botaoAbrir && botaoFechar && containerModal) {\r\n    function toggleModal(event) {\r\n      event.preventDefault();\r\n      containerModal.classList.toggle('ativo');\r\n    }\r\n    function cliqueForaModal(event) {\r\n      if (event.target === this) {\r\n        toggleModal(event);\r\n      }\r\n    }\r\n\r\n    botaoAbrir.addEventListener('click', toggleModal);\r\n    botaoFechar.addEventListener('click', toggleModal);\r\n    containerModal.addEventListener('click', cliqueForaModal);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./js/modulos/modal.js?");
+
+/***/ }),
+
+/***/ "./js/modulos/outsideClick.js":
+/*!************************************!*\
+  !*** ./js/modulos/outsideClick.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return initOutsideClick; });\nfunction initOutsideClick(element, events, callback) {\n  const html = document.documentElement;\n  const outside = 'data-outside';\n\n  if (!element.hasAttribute(outside)) {\n    events.forEach((userEvent) => {\n      setTimeout(() => {\n        html.addEventListener(userEvent, handleOutsideClick);\n      });\n    });\n    element.setAttribute(outside, '');\n  }\n  function handleOutsideClick(event) {\n    if (!element.contains(event.target)) {\n      element.removeAttribute(outside);\n      events.forEach((userEvent) => {\n        html.removeEventListener(userEvent, handleOutsideClick);\n      });\n      callback();\n    }\n  }\n}\n\n\n//# sourceURL=webpack:///./js/modulos/outsideClick.js?");
+
+/***/ }),
+
+/***/ "./js/script.js":
+/*!**********************!*\
+  !*** ./js/script.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modulos_animacao_maquina_escrever_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modulos/animacao-maquina-escrever.js */ \"./js/modulos/animacao-maquina-escrever.js\");\n/* harmony import */ var _modulos_animacao_scroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modulos/animacao-scroll.js */ \"./js/modulos/animacao-scroll.js\");\n/* harmony import */ var _modulos_animacao_scroll_suave_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modulos/animacao-scroll-suave.js */ \"./js/modulos/animacao-scroll-suave.js\");\n/* harmony import */ var _modulos_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modulos/modal.js */ \"./js/modulos/modal.js\");\n/* harmony import */ var _modulos_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modulos/dropdown-menu.js */ \"./js/modulos/dropdown-menu.js\");\n/* harmony import */ var _modulos_menu_mobile_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modulos/menu-mobile.js */ \"./js/modulos/menu-mobile.js\");\n/* harmony import */ var _modulos_funcionamento_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modulos/funcionamento.js */ \"./js/modulos/funcionamento.js\");\n\n\n\n\n\n\n\n\nObject(_modulos_animacao_maquina_escrever_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modulos_animacao_scroll_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modulos_animacao_scroll_suave_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\nObject(_modulos_modal_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\nObject(_modulos_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\nObject(_modulos_menu_mobile_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\nObject(_modulos_funcionamento_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\nconsole.log('Palmeiras não tem mundial');\n\n\n//# sourceURL=webpack:///./js/script.js?");
+
+/***/ })
+
+/******/ });
